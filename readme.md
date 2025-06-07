@@ -13,6 +13,7 @@ git clone
 cd 
 mkdir build && cd build
 cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=`python3 -c 'import torch;print(torch.utils.cmake_prefix_path)'` ..
+make -j$(nproc)
 ```
 
 ## Example Training Run
