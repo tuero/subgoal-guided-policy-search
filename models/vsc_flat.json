@@ -1,0 +1,32 @@
+{
+    "model_type": "vsc_flat",
+    "subgoal": {
+        "resnet_channels": 128,
+        "resnet_blocks": 4,
+        "reduce_channels": 2,
+        "mlp_layers": [512, 512],
+        "use_batchnorm": false
+    },
+    "conditional_low": {
+        "resnet_channels": 128,
+        "resnet_blocks": 4,
+        "reduce_channels": 2,
+        "mlp_layers": [512, 512],
+        "use_batchnorm": false
+    },
+    "vqvae": {
+        "resnet_channels": 128,
+        "blocks_per_group": 2,
+        "embedding_dim": 128,
+        "num_embeddings": 4,
+        "num_film_blocks": 3,
+        "use_ema": true,
+        "decay": 0.99,
+        "epsilon": 1e-5,
+        "beta": 0.25
+    },
+    "learning_rate": 0.000300,
+    "l2_weight_decay": 0.000100,
+    "device": "auto"
+}
+

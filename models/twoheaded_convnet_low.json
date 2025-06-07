@@ -1,0 +1,14 @@
+{
+    "model_type": "twoheaded_convnet",
+    "resnet_channels": 64,
+    "resnet_blocks": 4,
+    "policy_channels": 2,
+    "heuristic_channels": 2,
+    "policy_mlp_layers": [],
+    "heuristic_mlp_layers": [128],
+    "use_batchnorm": false,
+    "learning_rate": 0.0003,
+    "l2_weight_decay": 0.0001,
+    "device": "auto"
+}
+
