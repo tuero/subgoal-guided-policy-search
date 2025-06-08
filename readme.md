@@ -9,8 +9,8 @@ conda create -n sgps python=3.11
 conda activate sgps
 pip3 install torch torchvision torchaudio
 
-git clone 
-cd 
+git clone https://github.com/tuero/subgoal-guided-policy-search.git
+cd subgoal-guided-policy-search
 mkdir build && cd build
 cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=`python3 -c 'import torch;print(torch.utils.cmake_prefix_path)'` ..
 make -j$(nproc)
