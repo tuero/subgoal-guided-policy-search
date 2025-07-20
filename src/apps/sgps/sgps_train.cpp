@@ -371,10 +371,6 @@ auto init_model_vsc(
     const json &model_config_json,
     const std::string &base_name = ""
 ) -> std::shared_ptr<VSCWrapperT> {
-    std::unordered_map<int, float> recon_weights;
-    for (const auto &[k, v] : model_config_json["vqvae"]["recon_weights"].items()) {
-        recon_weights[std::stoi(k)] = v;
-    }
     VSCConfig model_config{
         obs_shape,
         num_actions,
@@ -396,7 +392,6 @@ auto init_model_vsc(
          .resnet_channels = model_config_json["vqvae"]["resnet_channels"].template get<int>(),
          .embedding_dim = model_config_json["vqvae"]["embedding_dim"].template get<int>(),
          .num_embeddings = model_config_json["vqvae"]["num_embeddings"].template get<int>(),
-         .recon_weights = recon_weights,
          .use_ema = model_config_json["vqvae"]["use_ema"].template get<bool>(),
          .decay = model_config_json["vqvae"]["decay"].template get<double>(),
          .epsilon = model_config_json["vqvae"]["epsilon"].template get<double>(),

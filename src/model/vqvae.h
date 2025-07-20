@@ -16,7 +16,6 @@ struct VQVAEConfig {
     int resnet_channels;
     int embedding_dim;
     int num_embeddings;
-    std::unordered_map<int, float> recon_weights;
     bool use_ema;
     double decay;
     double epsilon;
