@@ -1,4 +1,14 @@
 
+## Environments
+The following environments and problem instances were used, which have both C++/Python bindings.
+These are installed automatically when configuring the installation with cmake.
+- [Boulderdash](https://github.com/tuero/boulderdash_cpp)
+- [Boxworld](https://github.com/tuero/boxworld_cpp)
+- [Craftworld](https://github.com/tuero/craftworld_cpp_v2)
+- [Sokoban](https://github.com/tuero/sokoban_cpp)
+- [TSP](https://github.com/tuero/tsp_cpp/)
+
+
 ## Installing
 
 This library relies on C++23 features, and was tested with `g++14`
